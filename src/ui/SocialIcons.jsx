@@ -1,17 +1,19 @@
 function SocialIcons() {
   return (
     <div className="flex items-center justify-center gap-8">
-      <img className="text-grey6 h-6 w-6" src="./icons/x.svg" alt="x"></img>
-      <img
-        className="text-grey6 h-6 w-6"
-        src="./icons/github.svg"
-        alt="github"
-      ></img>
-      <img
-        className="text-grey6 h-6 w-6"
-        src="./icons/linkedin.svg"
-        alt="linkedin"
-      ></img>
+      <a href="https://twitter.com/khan_mohsin07" target="blank">
+        <img className="h-6 w-6" src="./icons/x.svg" alt="x"></img>
+      </a>
+      <a href="https://github.com/mohsin-khan07" target="blank">
+        <img className="h-6 w-6" src="./icons/github.svg" alt="github"></img>
+      </a>
+      <a href="https://www.linkedin.com/in/mohsin-khan07/" target="blank">
+        <img
+          className="h-6 w-6"
+          src="./icons/linkedin.svg"
+          alt="linkedin"
+        ></img>
+      </a>
     </div>
   );
 }

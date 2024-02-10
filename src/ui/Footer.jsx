@@ -15,11 +15,11 @@ function Contact() {
     <div className="flex flex-col items-center justify-center gap-12 py-28">
       <div className="flex flex-col items-center justify-center gap-4">
         <div className="text-2xl">Have a project in mind?</div>
-        <div className="text-[160px] font-bold leading-[150px] text-grey3">
+        <div className="text-[160px] font-bold leading-[150px] text-grey8 dark:text-grey3">
           LET'S TALK
         </div>
       </div>
-      <div className="text-2xl text-grey8">
+      <div className="text-2xl  dark:text-grey8">
         Connect with me at{" "}
         <span className="text-highlight">mkhan6720@gmail.com</span>
       </div>
@@ -30,7 +30,7 @@ function Contact() {
 
 function Copyright() {
   return (
-    <div className="flex items-center justify-center border-t border-grey2 py-8">
+    <div className="flex items-center justify-center border-t border-grey8 py-8 dark:border-grey2">
       <div>
         &copy; {new Date().getFullYear()} Mohsin Khan. All rights reserved.
       </div>
