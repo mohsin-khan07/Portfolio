@@ -1,8 +1,15 @@
-# React + Vite
+<div align="center">
+<a href="https://themohsinkhan.com"><img src="./public/logo.svg" width="60px"></a>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+<h1>themohsinkhan.com</h1>
+<p>My personal portfolio website</p>
+</div>
 
-Currently, two official plugins are available:
+# Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [ReactJS](https://react.dev/) - UI framework
+- [Vercel](https://vercel.com/) - Hosting and Deployment
+- [TailwindCSS](https://tailwindcss.com/) - Styling and UI
+- [Supabase](https://supabase.com/)https://supabase.com/ - Database Storage
