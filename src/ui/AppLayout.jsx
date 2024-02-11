@@ -14,8 +14,10 @@ function AppLayout() {
   const { isDark } = useDarkMode();
 
   return !isLoading ? (
-    <div className={isDark === true ? "dark" : ""}>
-      <div className="bg-white text-grey3 transition-colors duration-200 dark:bg-black dark:text-grey6">
+    <div className={`${isDark === true ? "dark" : ""}`}>
+      <div
+        className={`bg-white text-grey3 transition-colors duration-200 dark:bg-black dark:text-grey6`}
+      >
         <Header />
         <main>
           <Outlet />

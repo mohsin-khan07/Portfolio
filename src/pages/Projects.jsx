@@ -16,7 +16,7 @@ function Projects() {
 
   return projects ? (
     !error ? (
-      <div className="flex flex-col gap-12 px-52 py-14">
+      <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20 lg:px-40 xl:px-52">
         {projects.map((project) => {
           return (
             <ProjectsSection

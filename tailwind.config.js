@@ -20,7 +20,11 @@ export default {
       grey8: "#F4F4F5",
       grey9: "#FAFAFA",
     },
-    extend: {},
+    extend: {
+      screens: {
+        xs: "420px",
+      },
+    },
   },
   plugins: [],
 };

@@ -1,14 +1,14 @@
 function ProjectsSection({ logo, name, overview, url, repoLink, thumbnail }) {
   return (
-    <div className="rounded-xl border-2 border-grey8 bg-grey9 p-10 transition-colors dark:border-grey2 dark:bg-grey1">
+    <div className="... overflow-hidden text-ellipsis rounded-xl border-2 border-grey8 bg-grey9 p-4 transition-colors dark:border-grey2 dark:bg-grey1 sm:p-8 md:p-10">
       <div className="flex items-center gap-10">
         <div className="flex w-full flex-col justify-start gap-6">
           <img className="h-10 w-10" src={logo}></img>
-          <div className="text-4xl font-bold text-grey1 transition-colors dark:text-grey8">
+          <div className="text-2xl font-bold text-grey1 transition-colors dark:text-grey8 sm:text-4xl">
             {name}
           </div>
           <p className="text-grey3 dark:text-grey6">{overview}</p>
-          <div className="flex items-center gap-7">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-7">
             <a
               href={url}
               target="blank"
