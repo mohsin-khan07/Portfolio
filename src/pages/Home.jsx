@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import getImageGallery from "../services/apiImageGallery";
 import SocialIcons from "../ui/SocialIcons";
 import getProjects from "../services/apiProjects";
 import ProjectsSection from "../ui/ProjectsSection";
@@ -38,23 +37,33 @@ function Hero() {
 }
 
 function ImageGallery() {
-  const { data: images, error } = useQuery({
-    queryKey: ["imageGallery"],
-    queryFn: getImageGallery,
-  });
-
-  return !error ? (
+  return (
     <div className="flex justify-center gap-1 overflow-hidden pb-10 pt-8 sm:gap-3 sm:pt-10 lg:pb-20 lg:pt-14">
-      {images.map((image) => (
-        <img
-          src={image.image}
-          key={image.id}
-          className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
-        ></img>
-      ))}
+      <img
+        src="./imageGallery/image1.png"
+        className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
+      ></img>
+      <img
+        src="./imageGallery/image2.png"
+        className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
+      ></img>
+      <img
+        src="./imageGallery/image3.png"
+        className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
+      ></img>
+      <img
+        src="./imageGallery/image4.png"
+        className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
+      ></img>
+      <img
+        src="./imageGallery/image5.png"
+        className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
+      ></img>
+      <img
+        src="./imageGallery/image6.png"
+        className="w-40 sm:w-48 md:w-52 lg:w-56 xl:w-full"
+      ></img>
     </div>
-  ) : (
-    console.error(error)
   );
 }
 
