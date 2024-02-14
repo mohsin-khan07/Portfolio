@@ -12,4 +12,4 @@
 - [ReactJS](https://react.dev/) - UI framework
 - [Vercel](https://vercel.com/) - Hosting and Deployment
 - [TailwindCSS](https://tailwindcss.com/) - Styling and UI
-- [Supabase](https://supabase.com/)https://supabase.com/ - Database Storage
+- [Supabase](https://supabase.com/) - Database Storage
