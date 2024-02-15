@@ -1,7 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
 import SocialIcons from "../ui/SocialIcons";
-import getProjects from "../services/apiProjects";
 import ProjectsSection from "../ui/ProjectsSection";
+import { allProjects } from "../projects/allProjects";
 
 export default function Home() {
   return (
@@ -68,20 +67,9 @@ function ImageGallery() {
 }
 
 function Projects() {
-  const {
-    data: projects,
-    isLoading,
-    error,
-  } = useQuery({
-    queryKey: ["projects"],
-    queryFn: getProjects,
-  });
-
-  if (isLoading) return "";
-
-  return !error ? (
+  return (
     <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20 lg:px-40 xl:px-52">
-      {projects.slice(-3).map((project) => (
+      {allProjects.map((project) => (
         <ProjectsSection
           key={project.id}
           logo={project.logo}
@@ -89,11 +77,8 @@ function Projects() {
           overview={project.overview}
           url={project.url}
           repoLink={project.repoLink}
-          thumbnail={project.thumbnail}
         />
       ))}
     </div>
-  ) : (
-    console.error(error)
   );
 }
