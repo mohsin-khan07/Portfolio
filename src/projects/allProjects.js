@@ -5,9 +5,9 @@ import { coinGuardian } from "./coinGuardian";
 import { buyMeACoffee } from "./buyMeACoffee";
 
 export const allProjects = [
-  chainSurge,
-  tokenTrove,
-  nftGaze,
-  coinGuardian,
   buyMeACoffee,
+  coinGuardian,
+  chainSurge,
+  nftGaze,
+  tokenTrove,
 ];

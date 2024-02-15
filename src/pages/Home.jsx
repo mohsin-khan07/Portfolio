@@ -69,7 +69,7 @@ function ImageGallery() {
 function Projects() {
   return (
     <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20 lg:px-40 xl:px-52">
-      {allProjects.map((project) => (
+      {allProjects.slice(0, 3).map((project) => (
         <ProjectsSection
           key={project.id}
           logo={project.logo}
