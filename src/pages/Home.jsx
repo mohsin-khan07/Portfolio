@@ -23,7 +23,7 @@ function Hero() {
           </span>
         </div>
         <p className="text-lg md:text-xl">
-          Blockchain Engineer • Smart Contract Developer • UX Designer
+          Front-end Developer • Blockchain Enthusiast • Smart Contract Developer
         </p>
         <p className="w-3/4">
           I fuse creativity with code in the Web3 space. Excited to collaborate
