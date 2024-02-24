@@ -19,12 +19,11 @@ function Hero() {
         <div className="flex flex-col text-4xl font-bold leading-[50px] text-grey1 transition-colors dark:text-grey8 sm:text-5xl sm:leading-[60px] md:text-6xl md:leading-[80px] xl:text-7xl xl:leading-[90px]">
           <span>Hi, I’m Mohsin</span>
           <span>
-            A <span className="text-highlight">Front-end Blockchain</span>{" "}
-            Developer
+            A <span className="text-highlight">Front-end</span> Developer
           </span>
         </div>
         <p className="text-lg md:text-xl">
-          Front-end Developer • Blockchain Enthusiast • Smart Contract Developer
+          Software Developer • Front-end Engineer • Web3 Enthusiast
         </p>
         <p className="w-3/4">
           I fuse creativity with code in the Web3 space. Excited to collaborate
