@@ -1,10 +1,10 @@
 import ProjectsSection from "../ui/ProjectsSection";
-import { allProjects } from "../projects/allProjects";
+import { projects } from "../projects/projects";
 
 function Projects() {
   return (
     <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20 lg:px-40 xl:px-52">
-      {allProjects.map((project) => (
+      {projects.map((project) => (
         <ProjectsSection
           key={project.id}
           logo={project.logo}

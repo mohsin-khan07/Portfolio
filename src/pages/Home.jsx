@@ -1,14 +1,14 @@
 import SocialIcons from "../ui/SocialIcons";
-import ProjectsSection from "../ui/ProjectsSection";
-import { allProjects } from "../projects/allProjects";
+import { projects } from "../projects/projects";
 
 export default function Home() {
   return (
-    <div>
+    <section>
       <Hero />
       <ImageGallery />
       <Projects />
-    </div>
+      <InProgress />
+    </section>
   );
 }
 
@@ -66,10 +66,10 @@ function ImageGallery() {
   );
 }
 
-function Projects() {
+/* function Projects() {
   return (
     <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20 lg:px-40 xl:px-52">
-      {allProjects.slice(0, 3).map((project) => (
+      {projects.slice(0, 3).map((project) => (
         <ProjectsSection
           key={project.id}
           logo={project.logo}
@@ -81,4 +81,83 @@ function Projects() {
       ))}
     </div>
   );
+} */
+
+function Projects() {
+  return (
+    <section className="flex gap-8 px-52 py-24">
+      <section className="mr-14">
+        <section className="sticky top-4 flex flex-col items-center gap-2 text-7xl dark:text-grey3">
+          <h1>P</h1>
+          <h1>R</h1>
+          <h1>O</h1>
+          <h1>J</h1>
+          <h1>E</h1>
+          <h1>C</h1>
+          <h1>T</h1>
+          <h1>S</h1>
+        </section>
+      </section>
+      <section className="flex w-full flex-col gap-20">
+        {projects.slice(0, 5).map((project, i) => {
+          if (project.inProgress === false)
+            return (
+              <section className="flex flex-col gap-20" key={project.id}>
+                <Project name={project.name} overview={project.overview} />
+                {i === 4 ? "" : <HLine />}
+              </section>
+            );
+        })}
+        <button>View All Projects</button>
+      </section>
+    </section>
+  );
+}
+
+function InProgress() {
+  return (
+    <section className="flex gap-8 px-52 py-24">
+      <section className="mr-14">
+        <section className="sticky top-4 flex flex-col items-center gap-2 text-7xl dark:text-grey3">
+          <h1>S</h1>
+          <h1>O</h1>
+          <h1>O</h1>
+          <h1>N</h1>
+        </section>
+      </section>
+      <section className="flex w-full flex-col gap-20">
+        {projects.map((project) => {
+          if (project.inProgress === true)
+            return (
+              <section className="flex flex-col gap-20" key={project.id}>
+                <Project name={project.name} overview={project.overview} />
+                <HLine />
+              </section>
+            );
+        })}
+      </section>
+    </section>
+  );
+}
+
+function Project({ name, overview }) {
+  return (
+    <section className="flex gap-12">
+      <img
+        src="./testThumbnail.png"
+        width="400px"
+        height="auto"
+        className="rounded"
+      ></img>
+      <section className="flex flex-col justify-center gap-5">
+        <h1 className="text-4xl font-bold text-grey8">{name}</h1>
+        <p>{overview}</p>
+        <button className="text-left">More...</button>
+      </section>
+    </section>
+  );
+}
+
+function HLine() {
+  return <section className="border-b border-grey3"></section>;
 }
