@@ -4,7 +4,7 @@ export default function ThemeToggleBtn() {
   const { isDark, toggleDarkMode } = useDarkMode();
 
   return (
-    <div className="fixed right-6 top-6 flex">
+    <div className="fixed right-3 top-3 flex md:right-6 md:top-6">
       <button
         onClick={toggleDarkMode}
         className="flex items-center justify-center gap-8 rounded-full border-2 border-grey8 bg-grey9 px-4 py-3 text-sm text-grey7 dark:border-grey2 dark:bg-grey1"
