@@ -125,16 +125,17 @@ function Projects({ title, isInProgress }) {
 function Project({ name, description, overview, url, techStack, thumbnail }) {
   return (
     <section className="mdlg:flex-row flex flex-col gap-8 lg:gap-10 xl:gap-12">
-      <div className="max-w-xs overflow-hidden rounded-lg lg:max-w-sm xl:max-w-md">
-        <img src={thumbnail}></img>
-      </div>
+      <img
+        className="rounded-xl sm:max-w-xs lg:max-w-sm"
+        src={thumbnail}
+        alt={name}
+      ></img>
       <section className="flex flex-col justify-center gap-4 lg:gap-5">
         <a href={`${url}`} target="blank">
           <div className="flex cursor-pointer items-center gap-6">
             <h1 className="text-3xl font-bold text-grey1 dark:text-grey8 xl:text-4xl">
               {name}
             </h1>
-
             <div className="xs:w-4 lg:w-6 xl:w-8">
               <img src="./icons/arrow.svg" alt="arrow"></img>
             </div>
@@ -196,7 +197,7 @@ function About() {
           <img
             src="mohsin.png"
             alt="mohsin khan"
-            className="mb-14 w-64 lg:w-full"
+            className="mb-14 sm:max-w-xs lg:max-w-sm"
           ></img>
           <SocialIcons />
         </div>

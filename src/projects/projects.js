@@ -7,7 +7,7 @@ export const projects = [
     overview:
       "OccasioNex is an intuitive event management application designed to simplify the planning process for any occasion. From weddings and parties to corporate events, OccasioNex offers comprehensive tools for organizing guest lists, scheduling, budgeting, and more.",
     logo: "./projects/buyMeACoffee.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/comingsoon.png",
     techStack: ["NextJS", "React", "MongoDB", "Tailwind CSS"],
     url: "https://github.com/mohsin-khan07/OccasioNex",
     repoLink: "https://github.com/mohsin-khan07/OccasioNex",
@@ -20,7 +20,7 @@ export const projects = [
     overview:
       "Alpine Haven is your ultimate companion for managing a hotel with ease and efficiency. From seamless booking and check-in experiences to personalized guest services, Alpine Haven empowers you to create unforgettable getaways for your guests while streamlining your operations.",
     logo: "./projects/buyMeACoffee.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/comingsoon.png",
     techStack: ["React", "React Query", "Supabase", "Styled Components"],
     url: "https://github.com/mohsin-khan07/AlpineHaven",
     repoLink: "https://github.com/mohsin-khan07/AlpineHaven",
@@ -33,7 +33,7 @@ export const projects = [
     overview:
       "Yum Yield is a recipe finder application designed to help users discover and explore a wide variety of recipes from around the world.",
     logo: "./projects/buyMeACoffee.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/yumyield-tb.png",
     techStack: ["HTML", "JavaScript", "Sass"],
     url: "https://yumyield.vercel.app",
     repoLink: "https://github.com/mohsin-khan07/YumYield",
@@ -46,7 +46,7 @@ export const projects = [
     overview:
       "Buy Me A Coffee is a decentralized app similar to buy me a coffee website. In this anyone can send the owner some Ethereum.",
     logo: "./projects/buyMeACoffee.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/buymeacoffee-tb.png",
     techStack: ["Solidity", "React", "Tailwind CSS", "Ethers.js", "Hardhat"],
     url: "https://buymeacoffeedapp.vercel.app",
     repoLink: "https://github.com/mohsin-khan07/BuyMeACoffee",
@@ -59,12 +59,12 @@ export const projects = [
     overview:
       "A decentralized escrow smart contract application. A secure gateway to transparent transactions in the crypto world.",
     logo: "./projects/coinGuardian.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/coinguardian-tb.png",
     techStack: ["Solidity", "React", "Ethers.js", "Hardhat"],
     url: "https://coinguardian.netlify.app",
-    repoLink: "https://github.com/mohsin-khan07/coin-guardian",
+    repoLink: "https://github.com/mohsin-khan07/CoinGuardian",
   },
-  {
+  /* {
     id: 3,
     inProgress: false,
     name: "NFT Gaze",
@@ -76,7 +76,7 @@ export const projects = [
     techStack: ["React", "Alchemy SDK", "Ethers.js"],
     url: "https://nftgaze.netlify.app",
     repoLink: "https://github.com/mohsin-khan07/NFT-Gaze",
-  },
+  }, */
   {
     id: 2,
     inProgress: false,
@@ -85,10 +85,10 @@ export const projects = [
     overview:
       "Token Trove is your go-to app for effortlessly tracking your ERC20 tokens holdings on the Ethereum blockchain.",
     logo: "./projects/tokenTrove.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/tokentrove-tb.png",
     techStack: ["React", "Alchemy SDK", "Ethers.js"],
     url: "https://tokentrove.netlify.app",
-    repoLink: "https://github.com/mohsin-khan07/token-trove",
+    repoLink: "https://github.com/mohsin-khan07/TokenTrove",
   },
   {
     id: 1,
@@ -98,9 +98,9 @@ export const projects = [
     overview:
       "An Ethereum block explorer for seamless navigation through blocks, transactions, and addresses, delivering real-time insights into the network's activity.",
     logo: "./projects/chainSurge.png",
-    thumbnail: "./testThumbnail.png",
+    thumbnail: "./projects/chainsurge-tb.png",
     techStack: ["React", "Alchemy SDK", "Ethers.js", "CoinCap API"],
     url: "https://chainsurge.netlify.app",
-    repoLink: "https://github.com/mohsin-khan07/chain-surge",
+    repoLink: "https://github.com/mohsin-khan07/ChainSurge",
   },
 ];
