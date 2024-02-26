@@ -23,6 +23,7 @@ export default {
     extend: {
       screens: {
         xs: "420px",
+        mdlg: "900px",
       },
     },
   },

@@ -1,13 +1,14 @@
-import SocialIcons from "../ui/SocialIcons";
+import { Link } from "react-router-dom";
 import { projects } from "../projects/projects";
+import SocialIcons from "../ui/SocialIcons";
 
 export default function Home() {
   return (
     <section>
       <Hero />
       <ImageGallery />
-      <Projects />
-      <InProgress />
+      <Projects title="projects" isInProgress={false} />
+      <Projects title="~soon" isInProgress={true} />
     </section>
   );
 }
@@ -66,9 +67,9 @@ function ImageGallery() {
   );
 }
 
-/* function Projects() {
+/* function ProjectsOld() {
   return (
-    <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20 lg:px-40 xl:px-52">
+    <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20">
       {projects.slice(0, 3).map((project) => (
         <ProjectsSection
           key={project.id}
@@ -83,81 +84,92 @@ function ImageGallery() {
   );
 } */
 
-function Projects() {
+function Projects({ title, isInProgress }) {
   return (
-    <section className="flex gap-8 px-52 py-24">
-      <section className="mr-14">
-        <section className="sticky top-4 flex flex-col items-center gap-2 text-7xl dark:text-grey3">
-          <h1>P</h1>
-          <h1>R</h1>
-          <h1>O</h1>
-          <h1>J</h1>
-          <h1>E</h1>
-          <h1>C</h1>
-          <h1>T</h1>
-          <h1>S</h1>
+    <section className="flex gap-8 px-6 py-24 md:px-10 xl:px-20">
+      <section className="xs:mr-4 sm:mr-6 xl:mr-14">
+        <section className="sticky top-4">
+          {[...title].map((word) => (
+            <section
+              key={word}
+              className="flex flex-col items-center text-4xl uppercase text-grey8 dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
+            >
+              <span>{word}</span>
+            </section>
+          ))}
         </section>
       </section>
-      <section className="flex w-full flex-col gap-20">
+      <section className="mdlg:gap-16 flex w-full flex-col gap-10 xs:gap-12 lg:gap-20">
         {projects.slice(0, 5).map((project, i) => {
-          if (project.inProgress === false)
+          if (project.inProgress === isInProgress)
             return (
-              <section className="flex flex-col gap-20" key={project.id}>
-                <Project name={project.name} overview={project.overview} />
+              <section
+                className="mdlg:gap-16 flex flex-col gap-10 xs:gap-12 lg:gap-20"
+                key={project.id}
+              >
+                <Project
+                  name={project.name}
+                  description={project.description}
+                  overview={project.overview}
+                  url={project.url}
+                  techStack={project.techStack}
+                  thumbnail={project.thumbnail}
+                />
                 {i === 4 ? "" : <HLine />}
               </section>
             );
         })}
-        <button>View All Projects</button>
+        <Link
+          to="/projects"
+          className="mt-6 flex items-center justify-center rounded-lg bg-grey8 p-3 text-grey2 dark:bg-grey1 dark:text-grey7"
+        >
+          View All Projects
+        </Link>
       </section>
     </section>
   );
 }
 
-function InProgress() {
+function Project({ name, description, overview, url, techStack, thumbnail }) {
   return (
-    <section className="flex gap-8 px-52 py-24">
-      <section className="mr-14">
-        <section className="sticky top-4 flex flex-col items-center gap-2 text-7xl dark:text-grey3">
-          <h1>S</h1>
-          <h1>O</h1>
-          <h1>O</h1>
-          <h1>N</h1>
-        </section>
-      </section>
-      <section className="flex w-full flex-col gap-20">
-        {projects.map((project) => {
-          if (project.inProgress === true)
-            return (
-              <section className="flex flex-col gap-20" key={project.id}>
-                <Project name={project.name} overview={project.overview} />
-                <HLine />
-              </section>
-            );
-        })}
+    <section className="mdlg:flex-row flex flex-col gap-8 lg:gap-10 xl:gap-12">
+      <div className="max-w-xs overflow-hidden rounded-lg lg:max-w-sm xl:max-w-md">
+        <img src={thumbnail}></img>
+      </div>
+      <section className="flex flex-col justify-center gap-4 lg:gap-5">
+        <a href={`${url}`} target="blank">
+          <div className="flex cursor-pointer items-center gap-6">
+            <h1 className="text-3xl font-bold text-grey1 dark:text-grey8 xl:text-4xl">
+              {name}
+            </h1>
+
+            <div className="xs:w-4 lg:w-6 xl:w-8">
+              <img src="./icons/arrow.svg" alt="arrow"></img>
+            </div>
+          </div>
+        </a>
+        <p className="font-semibold dark:text-grey6">- {description}</p>
+        <p className="text-grey3 dark:text-grey6">{overview}</p>
+        <div className="flex flex-wrap gap-3">
+          {techStack
+            ? techStack.map((tech) => <TechStack key={tech} tech={tech} />)
+            : ""}
+        </div>
       </section>
     </section>
   );
 }
 
-function Project({ name, overview }) {
+function TechStack({ tech }) {
   return (
-    <section className="flex gap-12">
-      <img
-        src="./testThumbnail.png"
-        width="400px"
-        height="auto"
-        className="rounded"
-      ></img>
-      <section className="flex flex-col justify-center gap-5">
-        <h1 className="text-4xl font-bold text-grey8">{name}</h1>
-        <p>{overview}</p>
-        <button className="text-left">More...</button>
-      </section>
-    </section>
+    <div className="rounded bg-grey8 px-2 py-2 text-sm dark:bg-grey3 xs:px-3">
+      {tech}
+    </div>
   );
 }
 
 function HLine() {
-  return <section className="border-b border-grey3"></section>;
+  return (
+    <section className="border-b border-grey8 dark:border-grey3"></section>
+  );
 }

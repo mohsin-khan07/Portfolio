@@ -3,7 +3,7 @@ import { useDarkMode } from "../contexts/DarkModeContext";
 
 export default function Header() {
   return (
-    <div className="flex items-center justify-between px-6 py-8 sm:px-10 md:px-20 lg:px-40 xl:px-52">
+    <div className="flex items-center justify-between px-6 py-8 sm:px-10 md:px-10 xl:px-20">
       <Logo />
       <NavMenu />
       <ThemeToggleBtn />
@@ -29,35 +29,24 @@ function NavMenu() {
   // }
 
   return (
-    <div>
-      <ul className="flex items-center justify-center gap-8 rounded-full border-2 border-grey8 bg-grey9 px-8 py-3 text-sm text-grey1 transition-colors duration-200 dark:border-grey2 dark:bg-grey1 dark:text-grey7">
-        <NavLink
-          to="/about"
-          className={({ isActive }) => [
-            isActive ? "text-highlight" : "transition hover:text-highlight",
-          ]}
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/projects"
-          className={({ isActive }) => [
-            isActive ? "text-highlight" : "transition hover:text-highlight",
-          ]}
-        >
-          Projects
-        </NavLink>
-      </ul>
-      {/* <div className="relative md:hidden">
-        <button
-          onClick={handleMenuOpen}
-          className="flex items-center justify-center rounded-full border-2 border-grey8 bg-grey9 px-4 py-4 text-sm text-grey1 transition-colors dark:border-grey2 dark:bg-grey1 dark:text-grey7"
-        >
-          <img src="/icons/menu.svg" alt="menu" className="w-4"></img>
-        </button>
-      </div> */}
-      {/* <MobileMenu isOpen={menuOpen} /> */}
-    </div>
+    <ul className="flex items-center justify-center gap-8 rounded-full border-2 border-grey8 bg-grey9 px-8 py-3 text-sm text-grey1 transition-colors duration-200 dark:border-grey2 dark:bg-grey1 dark:text-grey7">
+      <NavLink
+        to="/about"
+        className={({ isActive }) => [
+          isActive ? "text-highlight" : "transition hover:text-highlight",
+        ]}
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/projects"
+        className={({ isActive }) => [
+          isActive ? "text-highlight" : "transition hover:text-highlight",
+        ]}
+      >
+        Projects
+      </NavLink>
+    </ul>
   );
 }
 
