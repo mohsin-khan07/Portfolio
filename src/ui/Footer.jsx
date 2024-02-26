@@ -21,7 +21,9 @@ function Contact() {
       </div>
       <div className="text-center dark:text-grey8 md:text-xl lg:text-2xl">
         Connect with me at{" "}
-        <span className="text-highlight">mkhan6720@gmail.com</span>
+        <a href="mailto:mkhan6720@gmail.com" className="text-highlight">
+          mkhan6720@gmail.com
+        </a>
       </div>
       <SocialIcons />
     </div>

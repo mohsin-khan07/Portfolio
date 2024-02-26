@@ -1,6 +1,6 @@
-import ProjectsSection from "../ui/ProjectsSection";
-import { projects } from "../projects/projects";
 import { useEffect } from "react";
+import { projects } from "../projects/projects";
+import ProjectsSection from "../ui/ProjectsSection";
 
 function Projects() {
   useEffect(() => {

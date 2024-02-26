@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="flex items-center justify-between px-6 py-8 sm:px-10 md:px-10 xl:px-20">
       <Logo />
-      <NavMenu />
+      {/* <NavMenu /> */}
       <ThemeToggleBtn />
     </div>
   );

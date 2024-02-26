@@ -1,6 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { useEffect } from "react";
+
 export default function About() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div>
       <AboutMe />
@@ -11,7 +17,7 @@ export default function About() {
 
 function AboutMe() {
   return (
-    <div className="items-top flex flex-col gap-6 px-6 py-14 sm:gap-10 sm:px-10 md:gap-12 md:px-20 lg:flex-row lg:px-40 lg:py-20 xl:gap-24 xl:px-52 xl:py-28">
+    <section className="items-top flex flex-col gap-6 px-6 py-14 sm:gap-10 sm:px-10 md:gap-12 md:px-20 lg:flex-row lg:px-40 lg:py-20 xl:gap-24 xl:px-52 xl:py-28">
       <div>
         <img
           src="mohsin.png"
@@ -53,24 +59,20 @@ function AboutMe() {
           collaborations, feel free to reach out!
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 
 function Skills() {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 py-4 xs:gap-6 xs:py-10 md:gap-8 lg:flex-row xl:gap-8 xl:py-16">
-      <div className="flex items-center justify-center gap-4 xs:gap-6 md:gap-8">
-        <IconBox imgSrc="./icons/solidity.svg" />
-        <IconBox imgSrc="./icons/javascript.png" />
-        <IconBox imgSrc="./icons/react.png" />
-        <IconBox imgSrc="./icons/ethereum.png" />
-      </div>
-      <div className="flex items-center justify-center gap-4 xs:gap-6 md:gap-8">
-        <IconBox imgSrc="./icons/git.png" />
-        <IconBox imgSrc="./icons/hardhat.png" />
-        <IconBox imgSrc="./icons/truffle.png" />
-      </div>
+    <div className="flex flex-wrap items-center justify-center gap-4 px-10 py-4 xs:gap-6 xs:py-10 md:gap-8 xl:gap-8 xl:py-16">
+      <IconBox imgSrc="./icons/solidity.svg" />
+      <IconBox imgSrc="./icons/javascript.png" />
+      <IconBox imgSrc="./icons/react.png" />
+      <IconBox imgSrc="./icons/ethereum.png" />
+      <IconBox imgSrc="./icons/git.png" />
+      <IconBox imgSrc="./icons/hardhat.png" />
+      <IconBox imgSrc="./icons/truffle.png" />
     </div>
   );
 }
