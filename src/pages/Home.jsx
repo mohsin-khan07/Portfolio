@@ -81,7 +81,7 @@ function Projects({ title, isInProgress }) {
           {[...title].map((word, i) => (
             <section
               key={i}
-              className="flex flex-col items-center text-4xl uppercase text-grey8 dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
+              className="flex flex-col items-center text-4xl uppercase text-grey7 dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
             >
               <span>{word}</span>
             </section>
@@ -91,8 +91,6 @@ function Projects({ title, isInProgress }) {
       <section className="mdlg:gap-16 flex w-full flex-col gap-10 xs:gap-12 lg:gap-20">
         {projects.map((project, i) => {
           if (project.inProgress === isInProgress) {
-            // const isLast =
-            //   arr.filter((p) => p.inProgress === isInProgress).length - 1;
             return (
               <section
                 className="mdlg:gap-16 flex flex-col gap-10 xs:gap-12 lg:gap-20"
@@ -111,7 +109,7 @@ function Projects({ title, isInProgress }) {
             );
           }
         })}
-        <div className="mt-6 flex items-center justify-center rounded-lg bg-grey8 p-3 text-grey2 dark:bg-grey1 dark:text-grey7">
+        <div className="mt-6 flex items-center justify-center rounded-lg bg-grey7 p-3 text-grey1 dark:bg-grey1 dark:text-grey7">
           <button onClick={handleProjectsBtn}>View All Projects</button>
         </div>
       </section>
