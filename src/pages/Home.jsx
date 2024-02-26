@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <ImageGallery />
       <Projects title="projects" isInProgress={false} />
-      <Projects title="~soon" isInProgress={true} />
+      <Projects title="upcoming" isInProgress={true} />
     </section>
   );
 }
