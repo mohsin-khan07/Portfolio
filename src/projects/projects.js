@@ -9,7 +9,7 @@ export const projects = [
     logo: "./projects/buyMeACoffee.png",
     thumbnail: "./testThumbnail.png",
     techStack: ["NextJS", "React", "MongoDB", "Tailwind CSS"],
-    url: "",
+    url: "https://github.com/mohsin-khan07/OccasioNex",
     repoLink: "https://github.com/mohsin-khan07/OccasioNex",
   },
   {
@@ -22,7 +22,7 @@ export const projects = [
     logo: "./projects/buyMeACoffee.png",
     thumbnail: "./testThumbnail.png",
     techStack: ["React", "React Query", "Supabase", "Styled Components"],
-    url: "",
+    url: "https://github.com/mohsin-khan07/AlpineHaven",
     repoLink: "https://github.com/mohsin-khan07/AlpineHaven",
   },
   {

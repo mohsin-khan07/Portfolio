@@ -22,12 +22,6 @@ function Logo() {
 }
 
 function NavMenu() {
-  // const [menuOpen, setMenuOpen] = useState(false);
-
-  // function handleMenuOpen() {
-  //   setMenuOpen(true);
-  // }
-
   return (
     <ul className="flex items-center justify-center gap-8 rounded-full border-2 border-grey8 bg-grey9 px-8 py-3 text-sm text-grey1 transition-colors duration-200 dark:border-grey2 dark:bg-grey1 dark:text-grey7">
       <NavLink
@@ -46,34 +40,17 @@ function NavMenu() {
       >
         Projects
       </NavLink>
+      <li className="hover:text-highlight">
+        <a
+          href="https://drive.google.com/file/d/1hQCtfHYr63NLRkOMuN6-BYpq3GLqUoPp/view"
+          target="blank"
+        >
+          Resume
+        </a>
+      </li>
     </ul>
   );
 }
-
-// function MobileMenu({ isOpen }) {
-//   return (
-//     <div
-//       className={`absolute mt-4 flex w-full flex-col justify-start gap-5 rounded-xl border-2 border-grey2 bg-grey1 py-5 transition-opacity ${isOpen ? "" : "hidden"}`}
-//     >
-//       <NavLink
-//         to="/about"
-//         className={({ isActive }) => [
-//           isActive ? "text-highlight" : "transition hover:text-highlight",
-//         ]}
-//       >
-//         About
-//       </NavLink>
-//       <NavLink
-//         to="/projects"
-//         className={({ isActive }) => [
-//           isActive ? "text-highlight" : "transition hover:text-highlight",
-//         ]}
-//       >
-//         Projects
-//       </NavLink>
-//     </div>
-//   );
-// }
 
 function ThemeToggleBtn() {
   const { isDark, toggleDarkMode } = useDarkMode();

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { projects } from "../projects/projects";
 import SocialIcons from "../ui/SocialIcons";
 
@@ -15,20 +15,13 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center gap-12 py-16 text-center">
+    <div className="flex flex-col items-center justify-center gap-12 py-24 text-center">
       <div className="flex flex-col items-center justify-center gap-5 px-5 md:gap-7">
-        <div className="flex flex-col text-4xl font-bold leading-[50px] text-grey1 transition-colors dark:text-grey8 sm:text-5xl sm:leading-[60px] md:text-6xl md:leading-[80px] xl:text-7xl xl:leading-[90px]">
-          <span>Hi, I’m Mohsin</span>
-          <span>
-            A <span className="text-highlight">Front-end</span> Developer
-          </span>
+        <div className="text-5xl font-bold leading-[50px] text-grey1 transition-colors dark:text-grey8 sm:leading-[60px] md:text-6xl md:leading-[80px] xl:text-8xl xl:leading-[90px]">
+          Hi, I’m <span className="text-highlight">Mohsin</span>
         </div>
-        <p className="text-lg md:text-xl">
+        <p className="text-lg md:text-xl xl:text-2xl">
           Software Developer • Front-end Engineer • Web3 Enthusiast
-        </p>
-        <p className="w-3/4">
-          I fuse creativity with code in the Web3 space. Excited to collaborate
-          on crafting extraordinary projects together!
         </p>
       </div>
       <SocialIcons />
@@ -67,31 +60,27 @@ function ImageGallery() {
   );
 }
 
-/* function ProjectsOld() {
-  return (
-    <div className="flex flex-col gap-12 px-6 py-20 sm:px-14 md:px-20">
-      {projects.slice(0, 3).map((project) => (
-        <ProjectsSection
-          key={project.id}
-          logo={project.logo}
-          name={project.name}
-          overview={project.overview}
-          url={project.url}
-          repoLink={project.repoLink}
-        />
-      ))}
-    </div>
-  );
-} */
-
 function Projects({ title, isInProgress }) {
+  const navigate = useNavigate();
+
+  const handleProjectsBtn = () => {
+    navigate("/projects");
+  };
+
+  let isLast;
+  isInProgress
+    ? (isLast =
+        projects.filter((project) => project.inProgress === isInProgress)
+          .length - 1)
+    : (isLast = projects.length - 1);
+
   return (
     <section className="flex gap-8 px-6 py-24 md:px-10 xl:px-20">
       <section className="xs:mr-4 sm:mr-6 xl:mr-14">
         <section className="sticky top-4">
-          {[...title].map((word) => (
+          {[...title].map((word, i) => (
             <section
-              key={word}
+              key={i}
               className="flex flex-col items-center text-4xl uppercase text-grey8 dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
             >
               <span>{word}</span>
@@ -100,8 +89,10 @@ function Projects({ title, isInProgress }) {
         </section>
       </section>
       <section className="mdlg:gap-16 flex w-full flex-col gap-10 xs:gap-12 lg:gap-20">
-        {projects.slice(0, 5).map((project, i) => {
-          if (project.inProgress === isInProgress)
+        {projects.map((project, i) => {
+          if (project.inProgress === isInProgress) {
+            // const isLast =
+            //   arr.filter((p) => p.inProgress === isInProgress).length - 1;
             return (
               <section
                 className="mdlg:gap-16 flex flex-col gap-10 xs:gap-12 lg:gap-20"
@@ -115,16 +106,14 @@ function Projects({ title, isInProgress }) {
                   techStack={project.techStack}
                   thumbnail={project.thumbnail}
                 />
-                {i === 4 ? "" : <HLine />}
+                {i === isLast ? "" : <HLine />}
               </section>
             );
+          }
         })}
-        <Link
-          to="/projects"
-          className="mt-6 flex items-center justify-center rounded-lg bg-grey8 p-3 text-grey2 dark:bg-grey1 dark:text-grey7"
-        >
-          View All Projects
-        </Link>
+        <div className="mt-6 flex items-center justify-center rounded-lg bg-grey8 p-3 text-grey2 dark:bg-grey1 dark:text-grey7">
+          <button onClick={handleProjectsBtn}>View All Projects</button>
+        </div>
       </section>
     </section>
   );
