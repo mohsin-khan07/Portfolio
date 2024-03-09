@@ -18,12 +18,17 @@ export default function Home() {
 function Hero() {
   return (
     <div className="flex flex-col items-center justify-center gap-12 py-24 text-center">
-      <div className="flex flex-col items-center justify-center gap-5 px-5 md:gap-7">
-        <div className="text-5xl font-bold leading-[50px] text-grey1 transition-colors dark:text-grey8 sm:leading-[60px] md:text-6xl md:leading-[80px] xl:text-8xl xl:leading-[90px]">
-          Hi, I’m <span className="text-highlight">Mohsin</span>
+      <div className="flex flex-col items-center justify-center gap-5 px-5 md:gap-10">
+        <div className="flex flex-col text-5xl font-bold leading-[50px] text-grey1 transition-colors dark:text-grey8 sm:leading-[60px] md:text-6xl md:leading-[80px] xl:gap-8 xl:text-8xl xl:leading-[90px]">
+          <span>Hi, I’m Mohsin.</span>
+          <span>
+            A <span className="text-highlight">Developer</span>.
+          </span>
         </div>
-        <p className="text-lg md:text-xl xl:text-2xl">
-          Software Developer • Front-end Engineer • Web3 Enthusiast
+        <p className="w-3/4">
+          I fuse creativity with code to create captivating web experiences.
+          Let’s connect and collaborate to craft extraordinary projects
+          together!
         </p>
       </div>
       <SocialIcons />
