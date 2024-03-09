@@ -4,7 +4,7 @@ import SocialIcons from "./SocialIcons";
 function Footer() {
   return (
     <div>
-      <Contact />
+      {/* <Contact /> */}
       <Copyright />
     </div>
   );

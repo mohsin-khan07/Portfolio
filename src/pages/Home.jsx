@@ -10,6 +10,7 @@ export default function Home() {
       <ImageGallery />
       <Projects title="projects" isInProgress={false} />
       <Projects title="upcoming" isInProgress={true} />
+      <About />
     </section>
   );
 }
@@ -85,7 +86,7 @@ function Projects({ title, isInProgress }) {
           {[...title].map((word, i) => (
             <section
               key={i}
-              className="flex flex-col items-center text-4xl uppercase text-grey7 dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
+              className="flex flex-col items-center text-4xl uppercase text-grey7 transition-colors dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
             >
               <span>{word}</span>
             </section>
@@ -132,7 +133,7 @@ function Project({ name, description, overview, url, techStack, thumbnail }) {
       <section className="flex flex-col justify-center gap-4 lg:gap-5">
         <a href={`${url}`} target="blank">
           <div className="flex cursor-pointer items-center gap-6">
-            <h1 className="text-3xl font-bold text-grey1 dark:text-grey8 xl:text-4xl">
+            <h1 className="text-3xl font-bold text-grey1 transition-colors dark:text-grey8 xl:text-4xl">
               {name}
             </h1>
             <div className="xs:w-4 lg:w-6 xl:w-8">
@@ -154,7 +155,7 @@ function Project({ name, description, overview, url, techStack, thumbnail }) {
 
 function TechStack({ tech }) {
   return (
-    <div className="rounded bg-grey8 px-2 py-2 text-sm dark:bg-grey3 xs:px-3">
+    <div className="rounded bg-grey8 px-2 py-2 text-sm transition-colors dark:bg-grey3 xs:px-3">
       {tech}
     </div>
   );
@@ -163,5 +164,54 @@ function TechStack({ tech }) {
 function HLine() {
   return (
     <section className="border-b border-grey8 dark:border-grey3"></section>
+  );
+}
+
+function About() {
+  const title = "About";
+
+  return (
+    <section className="flex gap-8 px-6 py-24 md:px-10 xl:px-20">
+      <section className="xs:mr-4 sm:mr-6 xl:mr-14">
+        <section className="sticky top-4">
+          {[...title].map((word, i) => (
+            <section
+              key={i}
+              className="flex flex-col items-center text-4xl uppercase text-grey7 transition-colors dark:text-grey3 xs:gap-2 xs:text-5xl sm:text-6xl xl:text-7xl"
+            >
+              <span>{word}</span>
+            </section>
+          ))}
+        </section>
+      </section>
+      <section className="flex w-full flex-col gap-10 xs:gap-12 mdlg:gap-16 lg:gap-20">
+        <section className="flex flex-col gap-8 mdlg:flex-row lg:gap-10 xl:gap-12">
+          <img
+            className="rounded-xl sm:max-w-xs lg:max-w-sm"
+            src="./mohsin.png"
+            alt="Mohsin Khan"
+          ></img>
+          <section className="flex flex-col justify-center gap-4 lg:gap-5">
+            <h1 className="text-2xl font-bold text-grey1 transition-colors dark:text-grey8 sm:text-3xl sm:leading-[40px] xl:text-4xl xl:leading-[50px]">
+              I’m a software developer working remotely from 40°C Rajasthan,
+              India.
+            </h1>
+            <p>
+              Over the past 3+ years, I've immersed myself in a diverse range of
+              digital domains, spanning website design, front-end development,
+              no-code development, app UI/UX, pay-per-click marketing, and sales
+              funnel building. I'm proud to have worn many hats in this dynamic
+              field.
+            </p>
+            <p>
+              These days, I’m focused on learning Web3, Rust, Go and backend
+              technologies. I'm eager to connect with like-minded individuals
+              and explore opportunities for collaboration. Let's connect and
+              create something amazing together!
+            </p>
+          </section>
+        </section>
+      </section>
+    </section>
   );
 }
