@@ -1,6 +1,10 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function ProjectDetails() {
+  const { id } = useParams();
+  console.log(id);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);

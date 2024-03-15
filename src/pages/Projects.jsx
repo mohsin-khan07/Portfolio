@@ -10,7 +10,7 @@ function Projects() {
   return (
     <section className="py-24">
       <div className="px-6 md:px-10 xl:px-20">
-        <h1 className="text-6xl font-bold text-grey9">Things I’ve made.</h1>
+        <h1 className="text-5xl font-bold text-grey9">Things I’ve made.</h1>
       </div>
       <ProjectsSection title="Things I’ve made." isInProgress={false} />
       <div className="mt-6 px-6 md:px-10 xl:px-20">
