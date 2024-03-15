@@ -1,6 +1,6 @@
 export const projects = [
   {
-    id: 8,
+    id: "occasionex",
     inProgress: true,
     name: "OccasioNex",
     description: "Event Management Software",
@@ -13,7 +13,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/OccasioNex",
   },
   {
-    id: 7,
+    id: "alpine-haven",
     inProgress: true,
     name: "Alpine Haven",
     description: "Hotel Management Application",
@@ -26,7 +26,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/AlpineHaven",
   },
   {
-    id: 6,
+    id: "yum-yield",
     inProgress: false,
     name: "Yum Yield",
     description: "Recipe Finder Web App",
@@ -39,7 +39,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/YumYield",
   },
   {
-    id: 5,
+    id: "buy-me-a-coffee",
     inProgress: false,
     name: "Buy Me A Coffee",
     description: "Decentralized Crowdfunding Platform",
@@ -52,7 +52,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/BuyMeACoffee",
   },
   {
-    id: 4,
+    id: "coin-guardian",
     inProgress: false,
     name: "Coin Guardian",
     description: "Decentralized Escrow Application",
@@ -65,7 +65,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/CoinGuardian",
   },
   /* {
-    id: 3,
+    id: "nft-gaze",
     inProgress: false,
     name: "NFT Gaze",
     description: "NFT Indexer App",
@@ -78,7 +78,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/NFT-Gaze",
   }, */
   {
-    id: 2,
+    id: "token-trove",
     inProgress: false,
     name: "Token Trove",
     description: "ERC20 Tokens Indexer App",
@@ -91,7 +91,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/TokenTrove",
   },
   {
-    id: 1,
+    id: "chain-surge",
     inProgress: false,
     name: "Chain Surge",
     description: "Ethereum Block Explorer",

@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import { projects } from "../projects/projects";
 import SocialIcons from "../ui/SocialIcons";
+import Project from "../ui/Project";
 
 export default function Home() {
   return (
@@ -107,14 +108,18 @@ function Projects({ title, isInProgress }) {
                 key={project.id}
               >
                 <Project
+                  id={project.id}
                   name={project.name}
                   description={project.description}
                   overview={project.overview}
-                  url={project.url}
                   techStack={project.techStack}
                   thumbnail={project.thumbnail}
                 />
-                {i === isLast ? "" : <HLine />}
+                {i === isLast ? (
+                  ""
+                ) : (
+                  <div className="border-b border-grey8 dark:border-grey3"></div>
+                )}
               </section>
             );
           }
@@ -127,50 +132,17 @@ function Projects({ title, isInProgress }) {
   );
 }
 
-function Project({ name, description, overview, url, techStack, thumbnail }) {
-  return (
-    <section className="flex flex-col gap-8 mdlg:flex-row lg:gap-10 xl:gap-12">
-      <img
-        className="rounded-xl sm:max-w-xs lg:max-w-sm"
-        src={thumbnail}
-        alt={name}
-      ></img>
-      <section className="flex flex-col justify-center gap-4 lg:gap-5">
-        <a href={`${url}`} target="blank">
-          <div className="flex cursor-pointer items-center gap-6">
-            <h1 className="text-3xl font-bold text-grey1 transition-colors dark:text-grey8 xl:text-4xl">
-              {name}
-            </h1>
-            <div className="xs:w-4 lg:w-6 xl:w-8">
-              <img src="./icons/arrow.svg" alt="arrow"></img>
-            </div>
-          </div>
-        </a>
-        <p className="font-semibold dark:text-grey6">- {description}</p>
-        <p className="text-grey3 dark:text-grey6">{overview}</p>
-        <div className="flex flex-wrap gap-3">
-          {techStack
-            ? techStack.map((tech) => <TechStack key={tech} tech={tech} />)
-            : ""}
-        </div>
-      </section>
-    </section>
-  );
-}
-
-function TechStack({ tech }) {
+/* function TechStack({ tech }) {
   return (
     <div className="rounded bg-grey8 px-2 py-2 text-sm transition-colors dark:bg-grey3 xs:px-3">
       {tech}
     </div>
   );
-}
+} */
 
-function HLine() {
-  return (
-    <section className="border-b border-grey8 dark:border-grey3"></section>
-  );
-}
+/* function HLine() {
+  return <div className="border-b border-grey8 dark:border-grey3"></div>;
+} */
 
 function About() {
   const title = "About";
