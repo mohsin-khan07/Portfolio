@@ -1,16 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
-function Project({ id, name, description, overview, thumbnail }) {
+function Project({ urlName, name, description, overview, thumbnail }) {
   const navigate = useNavigate();
 
-  const handleClick = (id) => {
-    navigate(`/projects/${id}`);
+  const handleClick = (urlName) => {
+    navigate(`/projects/${urlName}`);
   };
 
   return (
     <section
-      onClick={() => handleClick(id)}
-      className="cursor-pointer transition-all hover:-m-8 hover:rounded-xl hover:bg-grey1 hover:p-8"
+      onClick={() => handleClick(urlName)}
+      className="cursor-pointer transition-all hover:-m-8 hover:rounded-xl hover:bg-grey9 hover:p-8 dark:hover:bg-grey1"
     >
       <section className="flex flex-col gap-8 mdlg:flex-row lg:gap-10 xl:gap-12">
         <img

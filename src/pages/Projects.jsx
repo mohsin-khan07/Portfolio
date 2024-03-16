@@ -10,11 +10,15 @@ function Projects() {
   return (
     <section className="py-24">
       <div className="px-6 md:px-10 xl:px-20">
-        <h1 className="text-5xl font-bold text-grey9">Things I’ve made.</h1>
+        <h1 className="text-5xl font-bold text-grey1 dark:text-grey9">
+          Things I’ve made.
+        </h1>
       </div>
       <ProjectsSection title="Things I’ve made." isInProgress={false} />
       <div className="mt-6 px-6 md:px-10 xl:px-20">
-        <h1 className="text-6xl font-bold text-grey9">Upcoming Projects.</h1>
+        <h1 className="text-5xl font-bold text-grey1 dark:text-grey9">
+          Upcoming Projects.
+        </h1>
       </div>
       <ProjectsSection title="Upcoming Projects" isInProgress={true} />
     </section>
@@ -40,7 +44,7 @@ function ProjectsSection({ isInProgress }) {
                 key={project.id}
               >
                 <Project
-                  id={project.id}
+                  urlName={project.urlName}
                   name={project.name}
                   description={project.description}
                   overview={project.overview}

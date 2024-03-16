@@ -108,7 +108,7 @@ function Projects({ title, isInProgress }) {
                 key={project.id}
               >
                 <Project
-                  id={project.id}
+                  urlName={project.urlName}
                   name={project.name}
                   description={project.description}
                   overview={project.overview}
