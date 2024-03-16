@@ -12,6 +12,7 @@ function AppLayout() {
         className={`bg-white text-grey3 transition-colors duration-200 dark:bg-black dark:text-grey6`}
       >
         <Header />
+
         <main>
           <Outlet />
         </main>

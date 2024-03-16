@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import SocialIcons from "./SocialIcons";
+import ThemeToggleBtn from "./ThemeToggleBtn";
 
 function Footer() {
   return (
@@ -45,7 +46,7 @@ function Contact() {
         </div>
         <section className="border-b border-grey8 dark:border-grey3 mdlg:border-l"></section>
         <div className="flex w-full items-center justify-center py-6 mdlg:py-10">
-          <a href="mailto:mkhan6720@gmail.com">Resume</a>
+          <ThemeToggleBtn />
         </div>
       </div>
     </section>

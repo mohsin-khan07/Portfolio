@@ -18,9 +18,9 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center gap-12 py-24 text-center">
+    <div className="flex flex-col items-center justify-center gap-12 pb-24 pt-32 text-center">
       <div className="flex flex-col items-center justify-center gap-5 px-5 md:gap-10">
-        <div className="flex flex-col text-5xl font-bold leading-[50px] text-grey1 transition-colors dark:text-grey8 sm:leading-[60px] md:text-6xl md:leading-[80px] xl:gap-4 xl:text-8xl xl:leading-[90px]">
+        <div className="flex flex-col text-4xl font-bold leading-[45px] text-grey1 transition-colors dark:text-grey8 xs:text-5xl xs:leading-[50px] sm:leading-[60px] md:text-6xl md:leading-[80px] xl:gap-4 xl:text-8xl xl:leading-[90px]">
           <span>Hi, I’m Mohsin.</span>
           <span>
             A <span className="text-highlight">Developer</span>.
@@ -131,18 +131,6 @@ function Projects({ title, isInProgress }) {
     </section>
   );
 }
-
-/* function TechStack({ tech }) {
-  return (
-    <div className="rounded bg-grey8 px-2 py-2 text-sm transition-colors dark:bg-grey3 xs:px-3">
-      {tech}
-    </div>
-  );
-} */
-
-/* function HLine() {
-  return <div className="border-b border-grey8 dark:border-grey3"></div>;
-} */
 
 function About() {
   const title = "About";

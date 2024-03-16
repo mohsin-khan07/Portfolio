@@ -8,7 +8,7 @@ function Projects() {
   }, []);
 
   return (
-    <section className="py-24">
+    <section className="pt-24">
       <div className="px-6 md:px-10 xl:px-20">
         <h1 className="text-5xl font-bold text-grey1 dark:text-grey9">
           Things I’ve made.
