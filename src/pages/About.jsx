@@ -8,79 +8,33 @@ export default function About() {
   }, []);
 
   return (
-    <div>
-      <AboutMe />
-      <Skills />
-    </div>
-  );
-}
-
-function AboutMe() {
-  return (
-    <section className="items-top flex flex-col gap-6 px-6 py-14 sm:gap-10 sm:px-10 md:gap-12 md:px-20 lg:flex-row lg:px-40 lg:py-20 xl:gap-24 xl:px-52 xl:py-28">
-      <div>
+    <section className="flex w-full flex-col gap-10 px-6 py-24 xs:gap-12 md:px-10 mdlg:gap-16 lg:gap-20 xl:px-20">
+      <section className="flex flex-col gap-12 mdlg:flex-row lg:gap-16 xl:gap-20">
         <img
-          src="mohsin.png"
-          alt="mohsin khan"
-          className="w-64 lg:w-full"
+          className="rounded-xl sm:max-w-xs lg:max-w-sm"
+          src="./mohsin.png"
+          alt="Mohsin Khan"
         ></img>
-      </div>
-
-      <div className="flex w-full flex-col justify-start gap-6">
-        <div className="text-2xl font-semibold text-grey1 transition-colors dark:text-grey8 sm:text-4xl sm:leading-[50px] lg:leading-[50px] xl:text-5xl xl:leading-[62px]">
-          Harnessing the Potential of Blockchain Technology
-        </div>
-        <p>
-          Hey there, I'm Mohsin Khan, a Blockchain Developer hailing from India
-          and passionate about crafting software solutions using blockchain
-          technology with great user experiences.
-        </p>
-        <p>
-          My journey began with a curiosity-driven exploration of
-          cryptocurrencies and their underlying blockchain technology. As I
-          delved deeper, I realized the immense potential for blockchain beyond
-          just digital currencies.
-        </p>
-        <p>
-          Driven by a desire to contribute to this rapidly evolving field, I've
-          honed my skills in blockchain development, smart contract programming,
-          and decentralized application (DApp) creation.
-        </p>
-        <p>
-          I’m always excited about new ideas and possibilities that lie ahead in
-          the world of blockchain. Whether it's collaborating on groundbreaking
-          projects, exploring new use cases, or advocating for blockchain
-          adoption, I'm eager to continue my journey!
-        </p>
-        <p>
-          Currently, I'm actively seeking opportunities in blockchain
-          development where I can leverage my skills and expertise to make a
-          tangible impact. If you're interested in exploring potential
-          collaborations, feel free to reach out!
-        </p>
-      </div>
+        <section className="flex flex-col justify-center gap-4 lg:gap-5">
+          <h1 className="text-2xl font-bold text-grey1 transition-colors dark:text-grey8 sm:text-3xl sm:leading-[40px] xl:text-4xl xl:leading-[50px]">
+            I’m a software developer working remotely from 40°C Rajasthan,
+            India.
+          </h1>
+          <p>
+            Over the past 3+ years, I've immersed myself in a diverse range of
+            digital domains, spanning website design, front-end development,
+            no-code development, app UI/UX, pay-per-click marketing, and sales
+            funnel building. I'm proud to have worn many hats in this dynamic
+            field.
+          </p>
+          <p>
+            These days, I’m focused on learning Web3, Python, and Backend
+            technologies. I'm eager to connect with like-minded individuals and
+            explore opportunities for collaboration. Let's connect and create
+            something amazing together!
+          </p>
+        </section>
+      </section>
     </section>
-  );
-}
-
-function Skills() {
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-4 px-10 py-4 xs:gap-6 xs:py-10 md:gap-8 xl:gap-8 xl:py-16">
-      <IconBox imgSrc="./icons/solidity.svg" />
-      <IconBox imgSrc="./icons/javascript.png" />
-      <IconBox imgSrc="./icons/react.png" />
-      <IconBox imgSrc="./icons/ethereum.png" />
-      <IconBox imgSrc="./icons/git.png" />
-      <IconBox imgSrc="./icons/hardhat.png" />
-      <IconBox imgSrc="./icons/truffle.png" />
-    </div>
-  );
-}
-
-function IconBox({ imgSrc }) {
-  return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-grey8 bg-grey9 dark:border-grey2 dark:bg-grey1 xs:h-20 xs:w-20 xl:h-28 xl:w-28">
-      <img src={imgSrc} alt="icon" className="h-5 xs:h-10 xl:h-12"></img>
-    </div>
   );
 }

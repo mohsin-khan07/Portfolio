@@ -124,9 +124,9 @@ function Projects({ title, isInProgress }) {
             );
           }
         })}
-        {/* <div className="mt-6 flex items-center justify-center rounded-lg bg-grey7 p-3 text-grey1 dark:bg-grey1 dark:text-grey7">
+        <div className="mt-6 flex items-center justify-center rounded-lg bg-grey7 p-3 text-grey1 dark:bg-grey1 dark:text-grey7">
           <button onClick={handleProjectsBtn}>View All Projects</button>
-        </div> */}
+        </div>
       </section>
     </section>
   );
@@ -146,10 +146,18 @@ function Projects({ title, isInProgress }) {
 
 function About() {
   const title = "About";
+  const navigate = useNavigate();
+
+  const handleAboutBtn = () => {
+    navigate("/about");
+  };
 
   return (
     <section className="flex gap-8 px-6 py-24 md:px-10 xl:px-20">
-      <section className="xs:mr-4 sm:mr-6 xl:mr-14">
+      <section
+        onClick={handleAboutBtn}
+        className="cursor-pointer xs:mr-4 sm:mr-6 xl:mr-14"
+      >
         <section className="sticky top-4">
           {[...title].map((word, i) => (
             <section
@@ -181,7 +189,7 @@ function About() {
               field.
             </p>
             <p>
-              These days, I’m focused on learning Web3, Rust, Go and backend
+              These days, I’m focused on learning Web3, Python, and Backend
               technologies. I'm eager to connect with like-minded individuals
               and explore opportunities for collaboration. Let's connect and
               create something amazing together!

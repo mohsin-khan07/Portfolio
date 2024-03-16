@@ -31,7 +31,7 @@ export default function ProjectDetails() {
 
 function Thumbnail({ thumbnail, name }) {
   return (
-    <section className="mb-10 flex items-center justify-center">
+    <section className="flex items-center justify-center md:mb-10">
       <div className="w-fit overflow-hidden rounded-xl">
         <img src={thumbnail} alt={name}></img>
       </div>
@@ -52,7 +52,7 @@ function Name({ name, url, repoLink }) {
 
 function Links({ url, repoLink }) {
   return (
-    <section className="flex items-center justify-center gap-10 text-grey8">
+    <section className="flex flex-col items-center justify-center gap-5 text-grey8 xs:flex-row xs:gap-10">
       <a
         href={url}
         target="blank"
