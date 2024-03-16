@@ -42,7 +42,9 @@ function Thumbnail({ thumbnail, name }) {
 function Name({ name, url, repoLink }) {
   return (
     <section className="flex flex-col gap-8">
-      <h1 className="text-center text-5xl font-bold text-grey9">{name}</h1>
+      <h1 className="text-center text-5xl font-bold text-grey1 dark:text-grey9">
+        {name}
+      </h1>
       <Links url={url} repoLink={repoLink} />
     </section>
   );
@@ -74,7 +76,9 @@ function Links({ url, repoLink }) {
 function Overview({ overview }) {
   return (
     <section className="flex flex-col gap-6">
-      <h1 className="text-3xl font-semibold text-grey8">Overview</h1>
+      <h1 className="text-3xl font-semibold text-grey2 dark:text-grey8">
+        Overview
+      </h1>
       <p>{overview}</p>
     </section>
   );
@@ -83,7 +87,9 @@ function Overview({ overview }) {
 function TechnologyUsed({ techStack }) {
   return (
     <section className="flex flex-col gap-6">
-      <h1 className="text-3xl font-semibold text-grey8">Technology Used</h1>
+      <h1 className="text-3xl font-semibold text-grey2 dark:text-grey8">
+        Technology Used
+      </h1>
       <p>{techStack}</p>
     </section>
   );
@@ -92,16 +98,20 @@ function TechnologyUsed({ techStack }) {
 function KeyFeatures({ keyFeatures }) {
   return (
     <section className="flex flex-col gap-6">
-      <h1 className="text-3xl font-semibold text-grey8">Key Features</h1>
+      <h1 className="text-3xl font-semibold text-grey2 dark:text-grey8">
+        Key Features
+      </h1>
       <ul className="flex list-disc flex-col gap-6">
         {keyFeatures.map((feature) => {
           const index = feature.indexOf(":");
           const title = feature.substring(0, index + 1);
           const remaining = feature.substring(index + 1);
           return (
-            <li key={title}>
+            <li key={feature}>
               <p>
-                <span className="font-semibold text-grey7">{title}</span>
+                <span className="font-semibold text-grey3 dark:text-grey7">
+                  {title}
+                </span>
                 {remaining}
               </p>
             </li>
@@ -130,7 +140,7 @@ function NextProject({ currProjectId }) {
   if (nextProject)
     return (
       <section className="grid gap-10">
-        <h1 className="text-3xl font-semibold text-grey8">
+        <h1 className="text-3xl font-semibold text-grey2 dark:text-grey8">
           Next Project: {nextProject.name}
         </h1>
         <div onClick={handleNextClick} className="cursor-pointer">
