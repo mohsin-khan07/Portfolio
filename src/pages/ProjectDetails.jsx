@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 import { projects } from "../projects/projects";
 
 export default function ProjectDetails() {
@@ -90,7 +91,20 @@ function TechnologyUsed({ techStack }) {
       <h1 className="text-3xl font-semibold text-grey2 dark:text-grey8">
         Technology Used
       </h1>
-      <p>{techStack}</p>
+      <div className="flex gap-4">
+        {techStack.map((tech) => (
+          <div
+            key={tech}
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content={tech}
+            data-tooltip-place="top"
+            className="rounded bg-grey8 px-2 py-2 text-sm transition-colors dark:bg-grey3 xs:px-3"
+          >
+            {tech}
+          </div>
+        ))}
+      </div>
+      <Tooltip id="my-tooltip" />
     </section>
   );
 }
