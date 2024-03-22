@@ -90,7 +90,7 @@ function TechnologyUsed({ techStack }) {
       <h1 className="text-3xl font-semibold text-grey2 dark:text-grey8">
         Technology Used
       </h1>
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         {techStack.map((tech) => (
           <div
             key={tech}

@@ -1,16 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../projects/projects";
 import SocialIcons from "../ui/SocialIcons";
 import Project from "../ui/Project";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <section>
       <Hero />
       <ImageGallery />
-      <Projects title="projects" isInProgress={false} />
-      <Projects title="upcoming" isInProgress={true} />
+      <Projects title="projects" />
       <About />
     </section>
   );
@@ -23,7 +27,7 @@ function Hero() {
         <div className="flex flex-col text-4xl font-bold leading-[45px] text-grey1 transition-colors dark:text-grey8 xs:text-5xl xs:leading-[50px] sm:leading-[60px] md:text-6xl md:leading-[80px] xl:gap-4 xl:text-8xl xl:leading-[90px]">
           <span>Hi, I’m Mohsin.</span>
           <span>
-            A <span className="text-highlight">Developer</span>.
+            A <span className="text-highlight">Software Developer</span>.
           </span>
         </div>
         <p className="w-3/4">
@@ -68,15 +72,15 @@ function ImageGallery() {
   );
 }
 
-function Projects({ title, isInProgress }) {
+function Projects({ title }) {
   const navigate = useNavigate();
 
-  let isLast;
+  /* let isLast;
   isInProgress
     ? (isLast =
         projects.filter((project) => project.inProgress === isInProgress)
           .length - 1)
-    : (isLast = projects.length - 1);
+    : (isLast = projects.length - 1); */
 
   const handleProjectsBtn = () => {
     navigate("/projects");
@@ -100,29 +104,27 @@ function Projects({ title, isInProgress }) {
         </section>
       </section>
       <section className="flex w-full flex-col gap-10 xs:gap-12 mdlg:gap-16 lg:gap-20">
-        {projects.map((project, i) => {
-          if (project.inProgress === isInProgress) {
-            return (
-              <section
-                className="flex flex-col gap-10 xs:gap-12 mdlg:gap-16 lg:gap-20"
-                key={project.id}
-              >
-                <Project
-                  urlName={project.urlName}
-                  name={project.name}
-                  description={project.description}
-                  overview={project.overview}
-                  techStack={project.techStack}
-                  thumbnail={project.thumbnail}
-                />
-                {i === isLast ? (
-                  ""
-                ) : (
-                  <div className="border-b border-grey8 dark:border-grey3"></div>
-                )}
-              </section>
-            );
-          }
+        {projects.slice(0, 4).map((project, i) => {
+          return (
+            <section
+              className="flex flex-col gap-10 xs:gap-12 mdlg:gap-16 lg:gap-20"
+              key={project.id}
+            >
+              <Project
+                urlName={project.urlName}
+                name={project.name}
+                description={project.description}
+                overview={project.overview}
+                techStack={project.techStack}
+                thumbnail={project.thumbnail}
+              />
+              {i === 3 ? (
+                ""
+              ) : (
+                <div className="border-b border-grey8 dark:border-grey3"></div>
+              )}
+            </section>
+          );
         })}
         <div className="mt-6 flex items-center justify-center rounded-lg bg-grey7 p-3 text-grey1 dark:bg-grey1 dark:text-grey7">
           <button onClick={handleProjectsBtn}>View All Projects</button>
