@@ -126,9 +126,12 @@ function Projects({ title }) {
             </section>
           );
         })}
-        <div className="mt-6 flex items-center justify-center rounded-lg bg-grey7 p-3 text-grey1 dark:bg-grey1 dark:text-grey7">
-          <button onClick={handleProjectsBtn}>View All Projects</button>
-        </div>
+        <button
+          onClick={handleProjectsBtn}
+          className="mt-6 flex items-center justify-center rounded-lg bg-grey7 p-3 text-grey1 dark:bg-grey1 dark:text-grey7"
+        >
+          View All Projects
+        </button>
       </section>
     </section>
   );
