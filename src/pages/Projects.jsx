@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { projects } from "../projects/projects";
+import { projects } from "../data/projects";
 import Project from "../ui/Project";
 
 function Projects() {

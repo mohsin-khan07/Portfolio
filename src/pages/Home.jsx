@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { projects } from "../projects/projects";
+import { projects } from "../data/projects";
 import SocialIcons from "../ui/SocialIcons";
 import Project from "../ui/Project";
 

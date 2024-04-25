@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { projects } from "../projects/projects";
+import { projects } from "../data/projects";
 
 export default function ProjectDetails() {
   const { urlName } = useParams();
