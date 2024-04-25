@@ -16,6 +16,21 @@ export const projects = [
   },
   {
     id: 2,
+    urlName: "task-hub-app",
+    inProgress: false,
+    name: "Task Hub",
+    description: "A To-do List Application",
+    overview:
+      "Task Hub is a streamlined to-do list app that helps you organize tasks efficiently. With its intuitive interface and customizable features, you can stay on top of your responsibilities and boost productivity effortlessly.",
+    logo: "/projects/taskHub.png",
+    thumbnail: "/projects/taskhub-tb.png",
+    keyFeatures: ["", ""],
+    techStack: ["React", "Redux", "Tailwind CSS"],
+    url: "https://taskhubapp.vercel.app/",
+    repoLink: "https://github.com/mohsin-khan07/TaskHub",
+  },
+  {
+    id: 3,
     urlName: "sip-support",
     inProgress: false,
     name: "Sip Support",
@@ -30,7 +45,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/BuyMeACoffee",
   },
   {
-    id: 3,
+    id: 4,
     urlName: "yum-yield",
     inProgress: false,
     name: "Yum Yield",
@@ -50,7 +65,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/YumYield",
   },
   {
-    id: 4,
+    id: 5,
     urlName: "coin-guardian",
     inProgress: false,
     name: "Coin Guardian",
@@ -65,7 +80,7 @@ export const projects = [
     repoLink: "https://github.com/mohsin-khan07/CoinGuardian",
   },
   {
-    id: 5,
+    id: 6,
     urlName: "token-trove",
     inProgress: false,
     name: "Token Trove",
